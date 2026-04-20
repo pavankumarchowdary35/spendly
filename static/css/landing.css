@@ -1,0 +1,200 @@
+/* ------------------------------------------------------------------ */
+/* Landing page — hero                                                 */
+/* ------------------------------------------------------------------ */
+
+.lp-hero {
+    padding: 4.5rem 2rem 5rem;
+    text-align: center;
+    background: var(--paper);
+}
+
+.lp-hero-inner {
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+/* Badge */
+
+.lp-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: #e8f5ee;
+    border: 1px solid #b8dfc7;
+    color: #2d7a52;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.4rem 1.1rem;
+    border-radius: 999px;
+    margin-bottom: 2rem;
+}
+
+.lp-badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #2d7a52;
+    flex-shrink: 0;
+}
+
+/* Title */
+
+.lp-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 6vw, 4rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+}
+
+.lp-title-accent {
+    color: #2d7a52;
+}
+
+/* Subtitle */
+
+.lp-subtitle {
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+    line-height: 1.75;
+    margin-bottom: 2.5rem;
+}
+
+/* Buttons */
+
+.lp-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 3.5rem;
+}
+
+.lp-btn {
+    display: inline-block;
+    background: var(--ink);
+    color: #fff;
+    padding: 0.75rem 1.75rem;
+    border-radius: 10px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.lp-btn:hover { background: var(--accent); }
+
+/* Dashboard mock */
+
+.lp-dashboard {
+    background: #eeece6;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: left;
+}
+
+.lp-dashboard-dots {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 1.25rem;
+}
+
+.lp-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.lp-dot-red    { background: #ff5f56; }
+.lp-dot-yellow { background: #ffbd2e; }
+.lp-dot-green  { background: #27c93f; }
+
+/* Stat cards */
+
+.lp-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.lp-stat-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+}
+
+.lp-stat-label {
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    margin-bottom: 0.35rem;
+}
+
+.lp-stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+    font-family: var(--font-body);
+}
+
+.lp-stat-note {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.lp-note-danger  { color: #c0392b; }
+.lp-note-success { color: #2d7a52; }
+.lp-note-muted   { color: var(--ink-muted); }
+
+/* Category bars */
+
+.lp-bars {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.lp-bar-row {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    align-items: center;
+    gap: 1rem;
+}
+
+.lp-bar-label {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    text-align: right;
+}
+
+.lp-bar-track {
+    height: 8px;
+    background: #e8e5de;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.lp-bar {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.lp-bar-amber  { background: #d4890a; }
+.lp-bar-blue   { background: #4a8fd4; }
+.lp-bar-indigo { background: #6b6bd4; }
+
+/* Responsive */
+
+@media (max-width: 600px) {
+    .lp-stats { grid-template-columns: 1fr; }
+    .lp-actions { flex-direction: column; align-items: center; }
+    .lp-subtitle br { display: none; }
+}
