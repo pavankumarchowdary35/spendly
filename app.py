@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect, request, url_for
 
 app = Flask(__name__)
 
@@ -30,6 +30,11 @@ def terms():
 @app.route("/privacy")
 def privacy():
     return render_template("privacy.html")
+
+
+@app.route("/refresh")
+def refresh():
+    return redirect(request.referrer or url_for('landing'))
 
 
 # ------------------------------------------------------------------ #
